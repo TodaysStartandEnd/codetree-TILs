@@ -17,18 +17,7 @@ int main() {
     a[3] = 1;
     for(int i=4; i<=n; i++)
     {
-        if((i-2)%2 ==0 && (i-3)%3 ==0)
-        {
-            a[i] = a[i-2]+a[i-3];
-        }
-        else if((i-2)%2==0)
-        {
-            a[i] = a[i-2];
-        }
-        else if((i-3)%3==0)
-        {
-            a[i] = a[i-3];
-        }
+        a[i] = a[i-2]+a[i-3];
     }
     cout << a[n];
     return 0;
