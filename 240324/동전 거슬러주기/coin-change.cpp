@@ -2,7 +2,7 @@
 using namespace std;
 
 int a[101];
-int dp[10001];
+long dp[10001];
 
 int main() {
 
@@ -21,6 +21,10 @@ int main() {
     {
         for(int j=0; j<n;j++)
         {
+            if(i<a[j])
+            {
+                continue;
+            }
             if(dp[i- a[j]]>0)
             {
                 if(dp[i] == -1)
