@@ -17,13 +17,17 @@ int main() {
     {
         for(int i=0; i<3; i++)
         {
-            if(dp[j-a[i]]>0)
+            if(j-a[i]>0 || j-a[i]<=n)
             {
+                 if(dp[j-a[i]]>0)
+                {
                 dp[j]+=dp[j-a[i]];
-
+                dp[j]%= 10007;
+                }
             }
+           
         }
     }
-    cout << dp[n]%10007;
+    cout << dp[n];
     return 0;
 }
