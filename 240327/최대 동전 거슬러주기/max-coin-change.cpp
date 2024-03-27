@@ -20,9 +20,12 @@ int main() {
     {
         for(int j=0; j<n;j++)
         {
-            if(i-a[j]>=1 && i-a[j] <= m)
+            if((i-a[j])>=1 && (i-a[j]) <= m)
             {
-                dp[i] = max(dp[i-a[j]]+1, dp[i]);
+                if(dp[i-a[j]]>0)
+                {
+                    dp[i] = max(dp[i-a[j]]+1, dp[i]);
+                }
             }
         }
     }
