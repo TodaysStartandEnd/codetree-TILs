@@ -2,7 +2,7 @@
 #include <algorithm>
 using namespace std;
 int a[101];
-int dp[101];
+int dp[10001];
 
 int main() {
     int n, m;
