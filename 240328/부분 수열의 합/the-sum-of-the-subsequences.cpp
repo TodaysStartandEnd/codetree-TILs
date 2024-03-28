@@ -17,7 +17,7 @@ int main() {
     {
         for(int i=m; i>=0; i--)
         {
-            if(i-a[j]>0)
+            if(i-a[j]>=0)
             {
                 if(dp[i-a[j]] == 1)
                 {
