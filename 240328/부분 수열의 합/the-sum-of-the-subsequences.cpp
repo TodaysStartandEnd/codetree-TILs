@@ -3,8 +3,7 @@
 using namespace std;
 
 int a[101];
-bool dp[1001];
-bool use[101];
+bool dp[10001];
 
 int main() {
     int n,m;
