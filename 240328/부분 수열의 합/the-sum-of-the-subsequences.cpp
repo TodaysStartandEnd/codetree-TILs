@@ -18,7 +18,7 @@ int main() {
     {
         for(int i=m; i>=0; i--)
         {
-            if(dp[i-a[j]] == 1 && i <=m)
+            if(dp[i-a[j]] == 1)
             {
                 dp[i] = 1;
             }
