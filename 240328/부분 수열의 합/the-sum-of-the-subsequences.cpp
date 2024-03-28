@@ -17,10 +17,14 @@ int main() {
     {
         for(int i=m; i>=0; i--)
         {
-            if(dp[i-a[j]] == 1)
+            if(i-a[j]>0)
             {
-                dp[i] = 1;
+                if(dp[i-a[j]] == 1)
+                {
+                    dp[i] = 1;
+                }   
             }
+           
         }
        
     }
