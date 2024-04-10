@@ -26,14 +26,14 @@ int main()
     }
     for(auto i=map.begin(); i!=map.end(); i++)
     {
-        if(map.find(k-(i)->first)!=map.end())
+        if(map.find(k-((i)->first))!=map.end())
         {
-            if((map.find(k-(i)->first))->second != 0) // k합 만드는 다른 수가 먼저 존재했어서 체크 된 경우
+            if((map.find(k-(i)->first))->second != 0) 
             {
                 i->second --;
-                count ++;
+                count += i->second;
             }
-            
+           
         }
         
     }
