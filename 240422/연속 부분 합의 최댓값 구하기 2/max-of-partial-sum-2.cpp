@@ -5,10 +5,10 @@ using namespace std;
 int main() 
 {
     int n;
-    int max = -1000000000000;
+    long sum_max = -1000000000000;
     cin >> n;
-    int a[100001];
-    int sum[100001];
+    long a[100001];
+    long sum[100001];
     for(int i=0; i<n; i++)
     {
         cin >> a[i];
@@ -18,15 +18,15 @@ int main()
         }
     }
     
-    for(int i=0;i<n;i++)
+    for(int i=1;i<n;i++)
     {
-        sum[i] = max(sum [i-1]+a[i],a[i]);
-        if(sum[i] > max)
+        sum[i] = max((sum [i-1]+a[i]),a[i]);
+        if(sum[i] > sum_max)
         {
-            max = sum[i];
+            sum_max = sum[i];
         }
     } 
-    cout << max;
+    cout << sum_max;
 
     return 0;
 }
