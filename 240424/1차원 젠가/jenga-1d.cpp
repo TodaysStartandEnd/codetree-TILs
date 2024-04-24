@@ -6,7 +6,8 @@ int main()
     int a[101]={0,};
     int n;
     cin >> n;
-    int size = n;
+    int start =0;
+    int end = n;
     for(int i=n-1;i>=0;i--)
     {
         cin >> a[i];
@@ -15,14 +16,22 @@ int main()
     {
         int x,y;
         cin >> x >> y;
-        for(int j=y+1; j<size;j++)
+        if(y != end)
         {
-            a[j] = a[j-(y-x+1)];
+            for(int j=y+1; j<end;j++)
+            {
+                a[j] = a[j-(y-x+1)];
+            }
+            end-=(y-x+1);
         }
-        size-=(y-x+1);
+        else
+        {
+            start ++;
+        }
+        
     }
-    cout << size << "\n";
-    for(int i=size-1; i>=0;i--)
+    cout << end-start << "\n";
+    for(int i=end-1; i>=start;i--)
     {
         cout << a[i] <<'\n';
     }
