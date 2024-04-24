@@ -3,37 +3,35 @@ using namespace std;
 
 int main() 
 {
-    int a[101]={0,};
+    int a[101] = {0};
     int n;
     cin >> n;
-    int start =0;
-    int end = n;
-    for(int i=n;i>=1;i--)
+
+    for(int i = 1; i <= n; i++) 
     {
         cin >> a[i];
     }
-    for(int i=0; i<2; i++)
+
+    int s1, e1;
+    cin >> s1 >> e1;
+    for(int i = e1 + 1; i <= n; i++) 
     {
-        int x,y;
-        cin >> x >> y;
-        if(y != end)
-        {
-            for(int j=y+1; j<=end;j++)
-            {
-                a[j] = a[j-(y-x+1)];
-            }
-            end-=(y-x+1);
-        }
-        else
-        {
-            start += (y-x+1);
-        }
-        
+        a[i - (e1 - s1 + 1)] = a[i];
     }
-    cout << end-start << "\n";
-    for(int i=end; i>start;i--)
+    n -= (e1 - s1 + 1);
+
+    int s2, e2;
+    cin >> s2 >> e2;
+    for(int i = e2 + 1; i <= n; i++) 
     {
-        cout << a[i] <<'\n';
+        a[i - (e2 - s2 + 1)] = a[i];
+    }
+    n -= (e2 - s2 + 1);
+
+    cout << n << '\n';
+    for(int i = 1; i <= n; i++) 
+    {
+        cout << a[i] << '\n';
     }
 
     return 0;
