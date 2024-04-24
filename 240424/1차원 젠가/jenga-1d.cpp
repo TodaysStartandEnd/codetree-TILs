@@ -8,7 +8,7 @@ int main()
     cin >> n;
     int start =0;
     int end = n;
-    for(int i=n-1;i>=0;i--)
+    for(int i=n;i>=1;i--)
     {
         cin >> a[i];
     }
@@ -18,7 +18,7 @@ int main()
         cin >> x >> y;
         if(y != end)
         {
-            for(int j=y+1; j<end;j++)
+            for(int j=y+1; j<=end;j++)
             {
                 a[j] = a[j-(y-x+1)];
             }
@@ -26,12 +26,12 @@ int main()
         }
         else
         {
-            start ++;
+            start += (y-x+1);
         }
         
     }
     cout << end-start << "\n";
-    for(int i=end-1; i>=start;i--)
+    for(int i=end; i>start;i--)
     {
         cout << a[i] <<'\n';
     }
