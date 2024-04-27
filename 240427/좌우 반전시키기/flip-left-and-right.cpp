@@ -24,7 +24,7 @@ int main()
     if(a[n-2]==0)
     {
         count++;
-        a[n-2]= 0;
+        a[n-2]= 1;
         a[n-1]= !a[n-1];
     }
     for(int i=0; i<n;i++)
