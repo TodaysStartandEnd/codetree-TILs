@@ -13,7 +13,14 @@ int main()
     }
     if(n==1)
     {
-        count = -1;
+        if(a[0] == 0)
+        {
+            count = -1;
+        }
+        else
+        {
+            count = 0;
+        }
     }
     else
     {
