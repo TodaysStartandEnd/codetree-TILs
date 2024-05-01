@@ -20,7 +20,10 @@ int main()
         pq.pop();
         int y = pq.top();
         pq.pop();
-        pq.push(x-y);
+        if(x!=y)
+        {
+            pq.push(x-y);
+        }
     }
     if(pq.empty())
     {
