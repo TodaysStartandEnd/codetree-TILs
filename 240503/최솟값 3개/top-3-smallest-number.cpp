@@ -13,7 +13,7 @@ int main()
         pq.push(-x);
         
         int a[3];
-        int mul = 1;
+        long mul = 1;
         if(i>=2)
         {
             for(int j=0;j<3;j++)
