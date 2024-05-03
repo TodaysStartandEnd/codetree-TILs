@@ -11,22 +11,29 @@ int main()
         int x;
         cin >> x;
         pq.push(-x);
-    }
-    int mul = 1;
-    if(n>=3)
-    {
-        for(int i-0;i<3;i++)
-        {
-            int x = pq.top();
-            pq.pop();
-            mul*= -x;
-        }
         
+        int a[3];
+        int mul = 1;
+        if(i>=2)
+        {
+            for(int j=0;j<3;j++)
+            {
+                a[j] = pq.top();
+                pq.pop();
+                mul*= -a[j];
+            }
+            for(int j=0;j<3;j++)
+            {
+                pq.push(a[j]);
+            }
+        
+        }
+        else
+        {
+            mul = -1;
+        }
+        cout << mul <<'\n';
     }
-    else
-    {
-        mul = -1;
-    }
-    cout << mul;
+    
     return 0;
 }
