@@ -19,11 +19,11 @@ int main()
 
     }
     bool flag = 0;
-    for(auto i = map.begin(); i!=map.end();i++)
+    for(int i=0; i<s.size();i++)
     {
-        if((*i).second == 1)
+        if((map.find(s[i]))->second == 1)
         {
-            cout << (*i).first ;
+            cout << (map.find(s[i]))->first ;
             flag = 1;
             break;
         }
