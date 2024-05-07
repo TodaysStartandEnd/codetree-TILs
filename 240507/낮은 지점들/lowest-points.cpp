@@ -6,7 +6,7 @@ int main()
 {
     unordered_map<int, int> umap;
     int n;
-    int max = 0;
+    long max = 0;
     cin >> n;
     while(n--)
     {
