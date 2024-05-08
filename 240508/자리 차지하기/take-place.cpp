@@ -13,7 +13,7 @@ int main()
         int x; 
         int flag = 0;
         cin >> x;
-        if(x >=count)
+        if(x >= count)
         {
             for(int j=x; j>=1; j--)
             {
