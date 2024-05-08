@@ -1,37 +1,30 @@
 #include <iostream>
-#include <map>
+#include <set>
 using namespace std;
 
 int main() 
 {
-    bool s[100001];
+    set <int> set;
+    int n, m;
     int count =0;
-    int n, m ;
     cin >> n >> m;
-    for(int i=0; i<n;i++)
+    for(int i=1; i<=m; i++)
+    {
+        set.insert(-i);
+    }
+    for(int i=0; i<n; i++)
     {
         int x; 
-        int flag = 0;
         cin >> x;
-        if(x >= count)
+        if(set.lower_bound(-x)!=set.end())
         {
-            for(int j=x; j>=1; j--)
-            {
-                if(s[j] == 0)
-                {
-                    s[j] = 1;
-                    flag = 1;
-                    count++;
-                    break;
-                }
-            }
-            if(flag == 0)
-            {
-                break;
-            }
-
+            set.erase(*set.lower_bound(-x));
+            count ++;
         }
-       
+        else
+        {
+            break;
+        }
     }
     cout << count;
     return 0;
