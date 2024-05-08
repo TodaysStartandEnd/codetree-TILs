@@ -13,20 +13,25 @@ int main()
         int x; 
         int flag = 0;
         cin >> x;
-        for(int j=x; j>=1; j--)
+        if(x >=count)
         {
-            if(s[j] == 0)
+            for(int j=x; j>=1; j--)
             {
-                s[j] = 1;
-                flag = 1;
-                count++;
+                if(s[j] == 0)
+                {
+                    s[j] = 1;
+                    flag = 1;
+                    count++;
+                    break;
+                }
+            }
+            if(flag == 0)
+            {
                 break;
             }
+
         }
-        if(flag == 0)
-        {
-            break;
-        }
+       
     }
     cout << count;
     return 0;
