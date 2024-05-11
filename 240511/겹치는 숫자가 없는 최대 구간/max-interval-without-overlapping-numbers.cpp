@@ -33,11 +33,11 @@ int main()
         {
             size++;
         }
-        if(max <size)
-        {
-            max = size;
-        }
         
+    }
+    if(max <size)
+    {
+        max = size;
     }
     cout << max;
     
