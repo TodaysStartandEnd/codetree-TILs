@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
 int main() 
@@ -6,9 +7,8 @@ int main()
     int n;
     int count[100001];
     int a[100001];
-    int b[100001];
+    int next = 0;
     int size = 0;
-    int max =0;
     cin >> n;
     for(int i=0; i<n; i++)
     {
@@ -16,27 +16,16 @@ int main()
     }
     for(int i=0; i<n; i++)
     {
-        if(count[a[i]] == 0)
+        if(count[a[i]] != 0)
         {
-            b[a[i]] =i;
+            next = max(size, count[a[i]]);
         }
-        count[a[i]]++;
-        if(count[a[i]]>1)
-        {
-            if(max <i-b[a[i]])
-            {
-                max = i - b[a[i]];
-            }
-            b[a[i]] = i;
-        }
-        else
-        {
-            size++;
-        }
+        count[a[i]] = i+1;
+        size = max(size, i-next+1);
         
     }
-   
-    cout << max;
+    
+    cout << size;
     
 
     return 0;
