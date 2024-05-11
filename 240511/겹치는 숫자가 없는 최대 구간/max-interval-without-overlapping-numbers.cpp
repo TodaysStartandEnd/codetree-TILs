@@ -35,10 +35,7 @@ int main()
         }
         
     }
-    if(max <size)
-    {
-        max = size;
-    }
+   
     cout << max;
     
 
