@@ -10,16 +10,12 @@ int main()
     int size = 0;
     int max =0;
     cin >> n;
-    for(int i=1; i<=n; i++)
+    for(int i=0; i<n; i++)
     {
         cin >> a[i];
     }
-    for(int i=1; i<=n; i++)
+    for(int i=0; i<n; i++)
     {
-        if(max <size)
-        {
-            max = size;
-        }
         count[a[i]]++;
         if(count[a[i]] == 1)
         {
@@ -28,12 +24,19 @@ int main()
         if(count[a[i]]>1)
         {
             count[i]--;
-            size -=b[a[i]];
+            if(max <i-b[a[i]])
+            {
+                max = i - b[a[i]];
+            }
             b[a[i]] = i;
         }
         else
         {
             size++;
+        }
+        if(max <size)
+        {
+            max = size;
         }
         
     }
