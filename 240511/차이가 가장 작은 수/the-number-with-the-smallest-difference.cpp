@@ -14,7 +14,8 @@ int main()
         cin >> a[i];
         for(int j=0;j<i; j++)
         {
-            diff.insert(abs(a[i]-a[j]));
+            if(abs(a[i]-a[j])>=m)
+                diff.insert(abs(a[i]-a[j]));
         }
     }
 
