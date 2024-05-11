@@ -16,14 +16,13 @@ int main()
     }
     for(int i=0; i<n; i++)
     {
-        count[a[i]]++;
-        if(count[a[i]] == 1)
+        if(count[a[i]] == 0)
         {
             b[a[i]] =i;
         }
+        count[a[i]]++;
         if(count[a[i]]>1)
         {
-            count[i]--;
             if(max <i-b[a[i]])
             {
                 max = i - b[a[i]];
