@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-// 정석 버블 정렬 (앞에서부터 2개씩 처음부터 끝까지 전체 정렬 될 때까지 계속 비교)
+// 변형 버블 정렬 (정석 버블 정렬 시 처음부터 끝끼지 비교하면 가장 마지막은 정렬됨을 이용)
 int main() 
 {
     int a[101];
@@ -10,23 +10,18 @@ int main()
     {
         cin >> a[i];
     }
-    bool sorted;
-    do
+    for(int i=0; i<n-1; i++)
     {
-        sorted = 1;
-        for(int i=0; i<n-1; i++)
+        for(int j=0; j<n-i-1; j++)
         {
-            if(a[i]>a[i+1])
+            if(a[j] > a[j+1])
             {
-                int tmp = a[i];
-                a[i] = a[i+1];
-                a[i+1] = tmp;
-                sorted = 0;
+                int tmp = a[j];
+                a[j] = a[j+1];
+                a[j+1] = tmp;
             }
-            
         }
-
-    }while(sorted == 0);
+    }    
     for(int i=0; i<n; i++)
     {
         cout << a[i] <<" ";
