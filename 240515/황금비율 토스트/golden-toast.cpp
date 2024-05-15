@@ -36,7 +36,7 @@ int main()
         {
             if(it != li.end())
             {
-                li.erase(it);
+                it = li.erase(it);
             }
         }
         else if(order == "P")
