@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+// 오름차순 정렬이라고 했을 때 버블 정렬은 가장 끝 최대값부터, 선택 정렬은 가장 앞 최솟값부터 만들어주는 특징이 있는듯
 int main() 
 {
     int n;
