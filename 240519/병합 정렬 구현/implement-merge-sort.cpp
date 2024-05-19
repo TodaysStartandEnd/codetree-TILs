@@ -1,11 +1,12 @@
 #include <iostream>
 using namespace std;
 
-int arr[100001];
+int arr[100000];
+
 
 void merge(int low,int mid,int high)
 {
-    int merged_arr;
+    int merged_arr[100000];
     int i = low;
     int j = mid +1;
     int k = low;
@@ -13,16 +14,16 @@ void merge(int low,int mid,int high)
     while(i<=mid && j <= high)
     {
         if(arr[i] <= arr[j])
-        [
+        {
             merged_arr[k] = arr[i];
             k+=1;
             i+=1;
-        ]
+        }
         else
         {
             merged_arr[k] = arr[j];
             k+=1;
-            i+=1;
+            j+=1;
         }
     }
     while(i<=mid)
@@ -41,16 +42,15 @@ void merge(int low,int mid,int high)
     {
         arr[k] = merged_arr[k];
     }
-    return arr;
 }
 
-int merge_sort(int low, int high)
+void merge_sort(int low, int high)
 {
     if(low < high)
     {
         int mid = (low+high) / 2;
-        merge_sort(low, high);
-        merge_sort(low+1, high);
+        merge_sort(low, mid);
+        merge_sort(mid+1, high);
         merge(low,mid,high);
     }
         
