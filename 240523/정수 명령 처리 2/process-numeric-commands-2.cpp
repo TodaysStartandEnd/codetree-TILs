@@ -27,8 +27,7 @@ int main()
         }
         else if(s == "empty")
         {
-            cout << q.empty() ? 1 : 0 ;
-            cout <<'\n';
+            cout << (q.empty() ? 1 : 0) <<'\n';
         }
         else if(s == "front")
         {
