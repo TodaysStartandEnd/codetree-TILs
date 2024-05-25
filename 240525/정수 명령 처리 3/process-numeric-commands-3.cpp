@@ -42,11 +42,11 @@ int main()
         {
             cout << (d.empty() ? 1 : 0) <<"\n";
         }
-        else if("front")
+        else if(s == "front")
         {
             cout << d.front() <<'\n';
         }
-        else if("back")
+        else if(s == "back")
         {
             cout << d.back() <<'\n';
         }
