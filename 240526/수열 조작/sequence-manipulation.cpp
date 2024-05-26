@@ -7,7 +7,7 @@ int main()
     deque<int> d;
     int n;
     cin >> n;
-    for(int i=1; i<=7; i++)
+    for(int i=1; i<=n; i++)
     {
         d.push_back(i);  
     }
