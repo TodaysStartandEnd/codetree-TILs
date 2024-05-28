@@ -7,7 +7,7 @@ int main()
     set<int> ps;
     set<int> ms;
     int n;
-    int min= 100000;
+    int min= 1000000000;
     cin >> n;
 
     ps.insert(0);
