@@ -18,8 +18,8 @@ void Choose(int num)
     }
 
     for(int i=1; i<=k; i++)
-    {
-        if(v.size() >= 2 && v.back()==i && v.back()-1==i)
+    {   
+        if(v.size()>=2 &&((v[v.size()-1]==i) && (v[v.size()-2]==i)))
         {
             continue;
         }
@@ -39,10 +39,6 @@ void Choose(int num)
 int main() 
 {
     cin >> k >> n;
-    if (k == 1 && n > 2) 
-    {
-        return 0; 
-    }
     Choose(1);
     return 0;
 }
