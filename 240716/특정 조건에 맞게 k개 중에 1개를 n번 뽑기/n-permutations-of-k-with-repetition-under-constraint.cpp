@@ -14,25 +14,35 @@ void Choose(int num)
             cout << v[i] <<" ";
         }
         cout <<'\n';
-        return;
+        return;   
     }
+
     for(int i=1; i<=k; i++)
     {
-        if(v.back()==i&& v.back()-1==i)
+        if(v.size() >= 2 && v.back()==i && v.back()-1==i)
         {
             continue;
         }
+        else
+        {
+            v.push_back(i);
+            Choose(num+1);
+            v.pop_back();
+        }
 
-        v.push_back(i);
-        Choose(num+1);
-        v.pop_back();
+        
     }
+    return;
     
 }
 
 int main() 
 {
     cin >> k >> n;
+    if (k == 1 && n > 2) 
+    {
+        return 0; 
+    }
     Choose(1);
     return 0;
 }
