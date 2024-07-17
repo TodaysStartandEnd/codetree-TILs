@@ -7,17 +7,16 @@ long nums[21];
 int n, m;
 long max_xor = 0;
 
-void Choose(long now, int cnt)
+void Choose(long now, int cnt, int start)
 {
-    if(cnt == m+1)
+    if(cnt == m)
     {
        max_xor = max(max_xor, now);
        return;
     }
-    for(int i=cnt; i<n; i++)
+    for(int i=start; i<=n; i++)
     {
-        Choose(now^nums[i], ++cnt);
-        Choose(now,cnt);
+        Choose(now^nums[i], cnt+1, i+1);
     }
     
 }
@@ -29,7 +28,7 @@ int main()
     {
         cin >> nums[i];
     }
-    Choose(0,1);
+    Choose(0,0,0);
     cout <<max_xor <<'\n';
     return 0;
 }
