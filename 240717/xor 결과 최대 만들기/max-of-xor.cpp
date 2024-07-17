@@ -14,7 +14,7 @@ void Choose(long now, int cnt, int start)
        max_xor = max(max_xor, now);
        return;
     }
-    for(int i=start; i<=n; i++)
+    for(int i=start; i<n; i++)
     {
         Choose(now^nums[i], cnt+1, i+1);
     }
