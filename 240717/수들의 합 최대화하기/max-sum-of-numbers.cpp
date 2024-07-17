@@ -15,6 +15,7 @@ void Choose(long now, int cnt)
     if(cnt == n)
     {
         max_sum = max(max_sum, now);
+        return;
     }
     for(int i=0; i<n ; i++)
     {
