@@ -19,20 +19,18 @@ void Choose(long now, int cnt)
     }
     for(int i=0; i<n ; i++)
     {
-        for(int j=0; j<n; j++)
-        {
-            if((row[i] !=1) && (high[j] !=1))
+            if((row[i] !=1) && (high[i] !=1))
             {
                 row[i] = 1;
-                high[j] = 1;
-                Choose(now+a[i][j], cnt+1);
+                high[i] = 1;
+                Choose(now+a[i][cnt], cnt+1);
                 row[i] = 0;
-                high[j] = 0;
+                high[i] = 0;
             }
 
         }
     }
-}
+
 
 int main() 
 {
