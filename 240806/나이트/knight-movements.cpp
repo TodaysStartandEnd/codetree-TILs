@@ -59,7 +59,7 @@ int main()
     cin >> r1>>c1>>r2>>c2;
     Push(r1-1,c1-1,0);
     BFS();
-    if(step[r2-1][c2-1] == 0)
+    if(visited[r2-1][c2-1] == 0)
     {
         cout << -1 <<'\n';
     }
