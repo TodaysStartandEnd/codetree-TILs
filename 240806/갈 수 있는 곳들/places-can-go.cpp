@@ -32,7 +32,7 @@ void BFS()
             if(InRange(nx,ny)&&!visited[nx][ny])
             {
                 count++;
-                visited[x][y] = true;
+                visited[nx][ny] = true;
                 q.push({nx,ny});
             }
 
@@ -56,11 +56,13 @@ int main()
     {
         int x, y;
         cin >> x >> y;
-        if(visited[x][y] == 1)
+        if(visited[x-1][y-1] == 1)
         {
             continue;
         }
-        q.push({x,y});
+        count++;
+        visited[x-1][y-1] =1;
+        q.push({x-1,y-1});
         BFS();
 
     }
