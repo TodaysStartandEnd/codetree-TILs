@@ -14,12 +14,12 @@ int main()
         cin >> cnt[i];
     }
     
-    long dp[1000][4]={0,};
+    long dp[1001][4]={0,};
     dp[0][0] = cnt[0];
     dp[1][0] = cnt[1];
     dp[1][1] = dp[0][0] + dp[1][0];
 
-    for(int i=2; i<n ; i++)
+    for(int i=2; i<=n ; i++)
     {
         for(int j=0; j<3; j++)
         {
