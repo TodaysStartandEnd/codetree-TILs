@@ -15,9 +15,8 @@ int main() {
     for(int i=0; i<n; i++)
     {
         cin >> a[i];
-        dp[a[i]] = 1;
     }
-    for(int i=1; i<=m; i++)
+    for(int i=0; i<=m; i++)
     {
         for(int j=0; j<n;j++)
         {
@@ -25,7 +24,7 @@ int main() {
             {
                 continue;
             }
-            if(dp[i- a[j]]>=0)
+            if(dp[i- a[j]]>-1)
             {
                 if(dp[i] == 0)
                 {
