@@ -36,7 +36,7 @@ int main()
     {
         g[i][0]= 0;
     }
-    v[1] = 0;
+    v[1] = 1;
     dfs(1);
-    cout << count-1 ;
+    cout << count ;
 }
