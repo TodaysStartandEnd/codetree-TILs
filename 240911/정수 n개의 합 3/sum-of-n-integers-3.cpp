@@ -35,9 +35,9 @@ int main()
         }
     }
 
-    for(int i = k ; i< n; i++)
+    for(int i = k ; i<= n; i++)
     {
-        for(int j = k ; j<n; j++)
+        for(int j = k ; j<=n; j++)
         {
             maximum= max(sum[i][j] - sum[i-k][j]- sum[i][j-k]+ sum[i-k][j-k], maximum);
         }
