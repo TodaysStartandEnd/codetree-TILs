@@ -24,9 +24,9 @@ int main()
         }
         
     }
-    for(int i=2; i<=n; i++)
+    for(int i=k; i<=n; i++)
     {
-        maximum = max(sum[i]- sum[i-2], maximum);
+        maximum = max(sum[i]- sum[i-k], maximum);
     }
     cout << maximum;
     return 0;
