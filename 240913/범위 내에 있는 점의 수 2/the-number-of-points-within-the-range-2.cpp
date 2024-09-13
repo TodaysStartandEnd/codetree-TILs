@@ -2,8 +2,8 @@
 #include <algorithm>
 using namespace std;
 
-int a[1000001];
-long sum[2000002];
+int a[2000003];
+long sum[2000003];
 int main() 
 {
     int n, q;
@@ -17,7 +17,7 @@ int main()
     }
     sort(a,a+n);
     int j=0;
-    int plus =1;
+    int plus =0;
     for(int i=0; i<=2000003; i++)
     {
         if(a[j] == i)
