@@ -2,8 +2,8 @@
 #include <algorithm>
 using namespace std;
 
-long a[2000003];
-long sum[2000003];
+int a[2000003];
+int sum[2000003];
 int main() 
 {
     int n, q;
