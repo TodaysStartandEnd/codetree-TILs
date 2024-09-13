@@ -1,7 +1,8 @@
 #include <iostream>
+#include <algorithm>
 using namespace std;
 
-bool a[1000001];
+int a[1000001];
 long sum[2000002];
 int main() 
 {
@@ -11,10 +12,21 @@ int main()
     {
         int p;
         cin >> p;
-        for(int i=2*p; i<=2000002; i++)
+        a[i] = 2*p;
+        
+    }
+    sort(a,a+n);
+    int j=0;
+    int plus =1;
+    for(int i=0; i<=2000003; i++)
+    {
+        if(a[j] == i)
         {
-            sum[i]++;
+            plus++;
+            j++;
         }
+        sum[i]+= plus+1;
+
     }
     for(int i=0; i<q; i++)
     {
